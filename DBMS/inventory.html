@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/green-curve-abstract-background_53876-99569.jpg?w=1060&t=st=1697368037~exp=1697368637~hmac=4794a30ea187e1d4f89c3b49b469c2999eded4a8efeebcdaca6210cbb651b762');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #4CAF50;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .inventory-section {
+            text-align: center;
+            color: #fff;
+            padding: 100px;
+        }
+
+        .inventory-table {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-inc, .btn-dec, .btn-save {
+            padding: 8px 16px;
+            font-size: 14px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .btn-inc, .btn-dec {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-dec {
+            background-color: #dc3545;
+        }
+
+        .btn-save {
+            background-color: #007BFF;
+            color: white;
+        }
+        .inventory-section{
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="fill_details.php">Fill Details</a>
+        <a href="show_details.php">Show Details</a>
+        <a href="inventory.html">Inventory Details</a>
+        <a href="hguide.html">Hospital Guidelines</a>
+        <a class="active" href="#">Inventory</a>
+    </nav>
+
+    <div class="inventory-section">
+        <h1>Inventory Management</h1>
+        <p>Check the availability of equipment in the hospital inventory.</p>
+    </div>
+
+    <div class="inventory-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Equipment Name</th>
+                    <th>Availability</th>
+                    <th>Actions</th>
+                    <th>Save</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>X-ray Machine</td>
+                    <td id="availability-xray">15</td>
+                    <td>
+                        <div class="btn-container">
+                            <button class="btn-inc" onclick="increaseAvailability('availability-xray')">+</button>
+                            <button class="btn-dec" onclick="decreaseAvailability('availability-xray')">-</button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-save" onclick="saveAvailability('availability-xray')">Save</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MRI Scanner</td>
+                    <td id="availability-mri">10</td>
+                    <td>
+                        <div class="btn-container">
+                            <button class="btn-inc" onclick="increaseAvailability('availability-mri')">+</button>
+                            <button class="btn-dec" onclick="decreaseAvailability('availability-mri')">-</button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-save" onclick="saveAvailability('availability-mri')">Save</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Blood Pressure Monitor</td>
+                    <td id="availability-bp-monitor">25</td>
+                    <td>
+                        <div class="btn-container">
+                            <button class="btn-inc" onclick="increaseAvailability('availability-bp-monitor')">+</button>
+                            <button class="btn-dec" onclick="decreaseAvailability('availability-bp-monitor')">-</button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-save" onclick="saveAvailability('availability-bp-monitor')">Save</button>
+                    </td>
+                </tr>
+                <!-- Add more equipment rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function increaseAvailability(id) {
+            var availabilityElement = document.getElementById(id);
+            var currentAvailability = parseInt(availabilityElement.textContent);
+            availabilityElement.textContent = currentAvailability + 1;
+        }
+
+        function decreaseAvailability(id) {
+            var availabilityElement = document.getElementById(id);
+            var currentAvailability = parseInt(availabilityElement.textContent);
+            if (currentAvailability > 0) {
+                availabilityElement.textContent = currentAvailability - 1;
+            }
+        }
+
+        function saveAvailability(id) {
+            var availabilityElement = document.getElementById(id);
+            var currentAvailability = parseInt(availabilityElement.textContent);
+            // You can add code here to save the availability data, for example, send it to the server.
+            alert('Availability saved for ' + id + ': ' + currentAvailability);
+        }
+    </script>
+
+</body>
+</html>

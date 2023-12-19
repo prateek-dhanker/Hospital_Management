@@ -1,0 +1,260 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/green-curve-abstract-background_53876-99569.jpg?w=1060&t=st=1697368037~exp=1697368637~hmac=4794a30ea187e1d4f89c3b49b469c2999eded4a8efeebcdaca6210cbb651b762');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #4CAF50;
+        }
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="fill_details.php">Fill Details</a>
+        <a href="show_details.php">Show Details</a>
+        <a href="#">Hospital Guidlines</a>
+    </nav>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/green-curve-abstract-background_53876-99569.jpg?w=1060&t=st=1697368037~exp=1697368637~hmac=4794a30ea187e1d4f89c3b49b469c2999eded4a8efeebcdaca6210cbb651b762');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #4CAF50;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .welcome-section {
+            text-align: center;
+            color: #fff;
+            padding: 30px;
+        }
+
+        .key-features {
+            background-color: #38aa00;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            color: #333;
+        }
+
+        .news {
+            background-color: #38aa00;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            color: #333;
+        }
+       
+        .emergency-contacts {
+            background-color: #dc3545;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            color: #fff;
+        }
+        .welcome-section{
+            color: #4CAF50;
+        }
+        .welcome-section img {
+width: 250px;
+height: 250px;
+
+border-radius: 1rem;
+}
+
+        /* Add this to your existing CSS stylesheet or create a new one */
+
+footer {
+    background-color: #2ecc71;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+footer h3 {
+    color: #ffffff;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons i {
+    font-size: 24px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .container {
+        max-width: 100%;
+    }
+
+    footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="fill_details.php">Fill Details</a>
+        <a href="show_details.php">Show Details</a>
+        <a href="inventory.html">Inventory Details</a>
+        <a href="hguide.html">Hospital Guidelines</a>
+    </nav>
+
+    <div class="welcome-section">
+        <img src="https://img.freepik.com/free-vector/hand-drawn-doctor-cartoon-illustration_23-2150696182.jpg?w=1060&t=st=1700464315~exp=1700464915~hmac=d55ced5e2d56b8f07d17e37f073ad4a4b2bda7d012f53c1a5eb87e23056b2943" alt="">
+        <h1>Welcome to Our Hospital</h1>
+        <p>Providing Quality Healthcare Services</p>
+    </div>
+
+    <div class="key-features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Manage Patients</li>
+            <li>Find Doctors</li>
+            <li>Book Appointments</li>
+            <li>Generate Reports</li>
+        </ul>
+    </div>
+
+    <div class="news">
+        <h2>Latest News</h2>
+        <p>Stay updated with the latest news and announcements from our hospital.</p>
+    </div>
+
+    <div class="emergency-contacts">
+        <h2>Emergency Contacts</h2>
+        <p>In case of emergency, please contact:</p>
+        <p><strong>Emergency Services:</strong> 911</p>
+        <p><strong>Hospital Reception:</strong> (Your contact number)</p>
+    </div>
+    <footer style="background-color: black; color: #ffffff; padding: 30px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>123 Medical Street, Cityville</p>
+                    <p>Email: info@yourhospital.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Doctors</a></li>
+                        <li><a href="#">Appointments</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="padding-top: 20px;">
+            <p>&copy; 2023 Your Hospital. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
